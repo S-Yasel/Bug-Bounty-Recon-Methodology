@@ -1,0 +1,195 @@
+# 🕵️ Bug Bounty Recon Methodology
+
+A structured and comprehensive recon methodology designed for bug bounty hunters to systematically gather information **during the recon phase**. This workflow focuses on **efficient data collection, organization, and analysis** to maximize effectiveness while keeping the process safe and non-intrusive.
+
+---
+
+## 📌 Table of Contents
+
+- [Features](#features)
+- [Methodology Overview](#methodology-overview)
+- [Recommended Tools & Example Commands](#recommended-tools--example-commands)
+- [Contributing](#contributing)
+- [Disclaimer](#disclaimer)
+
+---
+
+## 🌟 Features
+
+- **Structured Recon Workflow**: Step-by-step approach to subdomain enumeration, endpoint discovery, and footprinting.  
+- **Tool Integration**: Compatible with popular recon tools for automation and efficiency.  
+- **Passive First**: Prioritizes passive information gathering to reduce impact on targets.  
+- **Organized Output**: Ensures data is collected and documented in a systematic way for easy analysis.
+
+---
+
+## 🗂 Methodology Overview
+
+1. **Target Identification**  
+   - Collect domains, IPs, and initial public information.  
+
+2. **Passive Recon**  
+   - Subdomain enumeration, OSINT gathering, scraping public sources.  
+   - Examples: `crt.sh`, `SecurityTrails`, `whois`, `shodan`.
+
+3. **Active Recon (Safe)**  
+   - Non-intrusive scans and information gathering, like port scanning or optional zone transfers.  
+   - Examples: `nmap`, `masscan` (configured safely).
+
+4. **Endpoint Discovery**  
+   - Identify directories, files, and hidden endpoints without exploiting vulnerabilities.  
+   - Examples: `gau`, `feroxbuster`.
+
+5. **Data Organization**  
+   - Document findings, create inventories of hosts, endpoints, and services.  
+   - Prepare data for later analysis or reporting.
+
+---
+
+## 🛠 Recommended Tools & Example Commands
+
+### Subdomain Enumeration
+- **Amass**:  
+  ```bash
+  amass enum -d target.com -o subdomains.txt
+Subfinder:
+subfinder -d target.com -o subdomains.txt
+Endpoint Discovery
+GAU: 
+gau target.com > urls.txt
+feroxbuster:
+feroxbuster -u https://target.com -w /path/to/wordlist.txt
+
+
+
+Perfect! Here's a fully **copy-paste-ready `README.md`** for your bug bounty recon methodology, focused entirely on the **recon phase**, with badges, table of contents, and example commands:
+
+````markdown
+# 🕵️ Bug Bounty Recon Methodology
+
+![Recon](https://img.shields.io/badge/Phase-Recon-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+A structured and comprehensive recon methodology designed for bug bounty hunters to systematically gather information **during the recon phase**. This workflow focuses on **efficient data collection, organization, and analysis** to maximize effectiveness while keeping the process safe and non-intrusive.
+
+---
+
+## 📌 Table of Contents
+
+- [Features](#features)
+- [Methodology Overview](#methodology-overview)
+- [Recommended Tools & Example Commands](#recommended-tools--example-commands)
+- [Contributing](#contributing)
+- [Disclaimer](#disclaimer)
+
+---
+
+## 🌟 Features
+
+- **Structured Recon Workflow**: Step-by-step approach to subdomain enumeration, endpoint discovery, and footprinting.  
+- **Tool Integration**: Compatible with popular recon tools for automation and efficiency.  
+- **Passive First**: Prioritizes passive information gathering to reduce impact on targets.  
+- **Organized Output**: Ensures data is collected and documented in a systematic way for easy analysis.
+
+---
+
+## 🗂 Methodology Overview
+
+1. **Target Identification**  
+   - Collect domains, IPs, and initial public information.  
+
+2. **Passive Recon**  
+   - Subdomain enumeration, OSINT gathering, scraping public sources.  
+   - Examples: `crt.sh`, `SecurityTrails`, `whois`, `shodan`.
+
+3. **Active Recon (Safe)**  
+   - Non-intrusive scans and information gathering, like port scanning or optional zone transfers.  
+   - Examples: `nmap`, `masscan` (configured safely).
+
+4. **Endpoint Discovery**  
+   - Identify directories, files, and hidden endpoints without exploiting vulnerabilities.  
+   - Examples: `gau`, `feroxbuster`.
+
+5. **Data Organization**  
+   - Document findings, create inventories of hosts, endpoints, and services.  
+   - Prepare data for later analysis or reporting.
+
+---
+
+## 🛠 Recommended Tools & Example Commands
+
+### Subdomain Enumeration
+- **Amass**:  
+  ```bash
+  amass enum -d target.com -o subdomains.txt
+````
+
+* **Subfinder**:
+
+  ```bash
+  subfinder -d target.com -o subdomains.txt
+  ```
+
+### Endpoint Discovery
+
+* **Gau**:
+
+  ```bash
+  gau target.com > urls.txt
+  ```
+* **Feroxbuster**:
+
+  ```bash
+  feroxbuster -u https://target.com -w /path/to/wordlist.txt
+  ```
+
+### Passive Recon
+
+* **crt.sh**: Search for certificates related to target domains.
+* **whois**:
+
+  ```bash
+  whois target.com
+  ```
+
+### Safe Active Recon
+
+* **Nmap** (non-intrusive):
+
+  ```bash
+  nmap -sS -Pn target.com
+  ```
+* **Masscan** (limited rate):
+
+  ```bash
+  masscan target.com -p0-65535 --rate=1000
+  ```
+
+---
+
+## 🤝 Contributing
+
+Feel free to contribute by improving the methodology, adding new tools, or suggesting workflow enhancements.
+
+---
+
+## ⚠️ Disclaimer
+
+This methodology is intended for **ethical hacking and authorized bug bounty programs only**. Do **not** use it on unauthorized targets.
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
